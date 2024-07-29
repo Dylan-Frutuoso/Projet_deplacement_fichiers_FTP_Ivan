@@ -16,5 +16,8 @@ else:
     print("Le fichier source n'existe pas.")
 
 
+print("ok finito")
+
+
 
 
