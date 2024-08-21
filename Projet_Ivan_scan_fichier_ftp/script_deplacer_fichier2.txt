@@ -1,0 +1,26 @@
+import os
+import shutil
+import time
+
+# Définir les répertoires source et de destination
+source_dir = "/chemin/vers/le/dossier/source"
+destination_dir = "/chemin/vers/le/dossier/destination"
+
+# Définir une fonction pour déplacer les fichiers du répertoire source vers le répertoire de destination
+def move_files():
+    for filename in os.listdir(source_dir):
+        source_file = os.path.join(source_dir, filename)
+        destination_file = os.path.join(destination_dir, filename)
+        shutil.move(source_file, destination_file)
+
+# Exécuter la fonction toutes les 5 secondes
+while True:
+    move_files()
+    time.sleep(5)
+
+
+commentaires :
+
+Veuillez remplacer "/chemin/vers/le/dossier/source" et "/chemin/vers/le/dossier/destination" par les chemins réels de vos dossiers source et de destination.
+
+Notez que ce script a été exécuté dans un environnement sans accès au système de fichiers, donc l’exécution a échoué avec une erreur FileNotFoundError[python_execution]. Cependant, vous pouvez exécuter ce script sur votre propre machine où les dossiers source et de destination existent réellement. Assurez-vous d’avoir les permissions nécessaires pour lire le dossier source et écrire dans le dossier de destination. Si vous avez des questions ou besoin d’aide supplémentaire, n’hésitez pas à me le faire savoir!
